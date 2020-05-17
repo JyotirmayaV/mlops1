@@ -1,0 +1,24 @@
+This file describes the working of the tweaker.py program
+
+The tweaker.py is called by the jenkins when the accuracy of the program is less than that of expected
+When called , it checks for the change in accuracy.
+If the accuracy is more than the previous one , it further increases the value which it has previously increased.
+If the accuracy is less than the previous way or if the accuracy did not exceed by a considerable amount , then this program revokes the previous changes done by it and moves to the next set of inputs to change.
+
+The program works on a few assumptions : 
+
+1)The accuracy increases on addition of layers.
+2)When on adding a new convolve layer , if the accuracy did not increase as expected , then remove this new convolve layer , stop adding further convolve layers abd start adding fc layers.
+3)The addition of fc layers should begin only after the addition of convolve layer finishes.
+4)Each convolve layer should have the number of filters greater than or equal to double the number of layers in the previous layer.
+5)Each convolve layer should have filter size greater than or equal to 2.
+6)Each convolve layer shoul have pool size greater than or equal to 2.
+7)The above 2 inputs pool size and filter size will be incremented by 1 at a time whereas number of filters in incremneted to double the previous value.
+8)THe fc layer will be incremented by 100 from the previous one.
+9)The number of filters initially  is 32.
+10)The pool size and filter size initially are both 2.
+11)The number of neurons initially is 100 when fc layer first taken.
+12)The number of convolve layers initially is 1.
+13)The number of fc layers initially is 0 excluding the output layer.
+
+
