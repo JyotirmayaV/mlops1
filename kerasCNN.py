@@ -145,10 +145,3 @@ display_matter.write('<pre>\n---------------------------------------------\n')
 display_matter.write(this_layer)
 display_matter.write('\nAccuracy achieved : ' + str(scores[1])+'\n</pre>')
 display_matter.close()
-
-import subprocess as sb
-
-#calling the tweaker.py program to tweak the inputs
-sb.getoutput('python3 tweaker.py')
-
-
