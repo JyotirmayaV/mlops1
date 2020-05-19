@@ -1,13 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# ### Let's construct LeNet in Keras!
-# 
-# #### First let's load and prep our MNIST data
-
-# In[1]:
-
-
 from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten
