@@ -1,4 +1,4 @@
-programfile = open('program.py','r')	#connecting to the code file
+programfile = open('/home/jyotirmaya/ws/mlops1/program.py','r')	#connecting to the code file
 code = programfile.read()				#reading the code file
 
 if 'keras' or 'tensorflow' in code:						#because keras or tensorflow keyword is a cmust have for a dl program
