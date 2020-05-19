@@ -1,5 +1,6 @@
-data_file = open('data.txt','r')
-input_file = open('input.txt','r')
+data_file = open('/mlops/data.txt','r')
+input_file = open('/mlops/input.txt','r')
+accuracy_file = open('/mlops/accuracy.txt','r')
 
 data = data_file.read()
 data = data.split('\n')
@@ -11,7 +12,8 @@ cp_line = line % 3						  #in case of convolve layer (line % 3) giving output of
 entered_data = int(data[3])				  #implies the changed data which was taken by program as input
 old_data = int(data[4])					  #this is the value from which changes in the entered_data will begin for the first time in the layer			
 index_fc = int(data[5])					  #line number of the input which shall specify the number of fully connected layers in the program
-new_accuracy = float(data[6]) 			  #read the new accuraacy achieved
+
+new_accuracy = float(accuracy_file.readLine()) 			  #read the new accuraacy achieved
 
 #Note : For the first time old data and entered data will be same
 
