@@ -7,6 +7,9 @@ from keras.regularizers import l2
 from keras.datasets import mnist
 from keras.utils import np_utils
 import keras
+import sys
+
+sys.stdin=open('/mlops/input.txt','r')
 
 # loads the MNIST dataset
 (x_train, y_train), (x_test, y_test)  = mnist.load_data()
